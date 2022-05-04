@@ -1,0 +1,785 @@
+@charset "UTF-8";
+
+@font-face { 
+    font-family: Josefin Sans Bold;    /* define una fuente */
+    src: url('Fonts/JosefinSans/JosefinSans-Bold.ttf');  /* indica su ubicación */
+}
+@font-face { 
+    font-family: Josefin Sans Light;    /* define una fuente */
+    src: url('Fonts/JosefinSans/JosefinSans-Light.ttf');  /* indica su ubicación */
+	
+}
+@font-face { 
+    font-family: Lato;    /* define una fuente */
+    src: url('Fonts/lato/Lato-Regular.ttf');  /* indica su ubicación */
+	
+}
+body {      /* los estilos aplicados a una etiqueta valen para todos los casos */                                             
+	background-color:#F4F0E9; 
+    font-family: Lato;	
+	font-size: 15px;
+	margin: 0px;
+}
+
+
+::-webkit-scrollbar { 
+    width: 2px;     /* Tamaño del scroll en vertical */
+	height: 2px;    /* Tamaño del scroll en horizontal */
+	display: block;  /* Ocultar scroll */
+} 
+
+
+a{
+	color: #0BC1C5;
+	text-decoration:none; /* para que no subraye los vínculos */ 
+}
+a:hover {    /* indica el estilo cuando el cursor está sobre el elemento */ 
+	color: #00FFFF;
+}
+
+/* elementos del menu desplegable*/
+#btn-menu {
+    display: none;   /* oculta el checkbox cuando no es necesario*/
+} 
+
+header label {     /* coloca el checkbox en un lugar y tamaño exactos*/
+    display: none;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+	z-index: 100
+} 
+header label:hover {
+    cursor: pointer;    /* cambia el cursor sobre el checkbox para indicar la interacción*/
+}	
+
+.menu ul{    /* cuando lleva un punto antes, el estilo aplica sobre etiquetas marcadas */ 
+	width:100%;
+	height:28px;
+	position: fixed;
+	background: #f4f0e9;
+	margin: auto;
+	color:#000;
+	z-index: 20;	
+    list-style: none;     /* para evitar los bullit list en la lista*/
+    padding: 0;
+    display: flex;
+}
+
+.menu li{      /* estilo para cada botón del menu de navegación */ 
+    width:100%;
+    margin-top: 5px;
+	text-align: center;
+	font-family: Josefin Sans Light;  /* solo si se suministra el archivo de la fuente */
+	font-size: 11px;
+	font-style: normal;
+	font-weight: normal;
+	padding:5px 10px;
+	cursor: pointer;
+	color:#000;
+}
+
+.menu li a {   /* estilo para links en botón del menu de navegación */ 
+	color:#000;
+	text-decoration: none;	/* para que no subraye los vínculos */ 
+	cursor: pointer;
+}
+
+.menu li a:hover {	/* estilo para botón del menu de navegación cuando pasa el cursor */ 
+	color:#000;
+	cursor:pointer;
+	background-color: rgba(183, 183, 183, 0);
+	font-weight: 900;  /* define caracteres de la fuente mas grueso o delgado */
+}   
+   
+.pestañas{ /* estilo para cada barra del sitio de la subpagina historia*/ 
+   width: 100%;
+   height: 25px;
+   background-color:  #dddad4;
+   margin: auto;
+   padding:5px 0px 5px 0px;
+   text-align: center;
+}
+
+.botonp {      /* estilo para cada botón del menu de historia */ 
+	font-family: Josefin Sans Light;  /* solo si se suministra el archivo de la fuente */
+	font-size: 12px;
+	width: 140px;
+	padding:5px 10px 6px 8px;
+	cursor: pointer;
+	border: none;
+	color:#000;
+	background: rgba(183, 183, 183, 0);
+}
+
+.botonp:link {   /* estilo para links en botón del menu de historia */ 
+	color:#666666;
+	text-decoration: none;	/* para que no subraye los vínculos */ 
+	cursor: pointer;
+}
+
+.botonp:hover {	/* estilo para botón del menu de historia cuando pasa el cursor */ 
+	color:#000;
+	cursor:pointer;
+	background-color: rgba(183, 183, 183, 0);
+	font-weight: bold;
+} 
+
+h1{     /* estilo para los titular de inicio jerarquia 1*/ 
+	font-family: Josefin Sans Bold; /* la fuente definida */
+	color:#FFFFFF;
+	font-size: 68px;
+	font-weight: bold;
+	text-align: center;
+	max-width: 1020px; /* ancho máximo del párrafo */
+	margin:auto;          /* margen igual a izquierda y derecha */ 
+	margin-bottom:10px;
+	text-shadow: 2px 1px #000
+} 
+
+
+h2{   /* estilo para los titular de subpaginas jerarquia 2*/
+	font-family: Josefin Sans Bold; /* la fuente definida */
+	color:#FFFFFF;
+	font-size: 48px;
+	font-weight: bold;
+	text-align: center;
+	max-width: 1020px; /* ancho máximo del párrafo */
+	margin:auto;          /* margen igual a izquierda y derecha */ 
+	margin-bottom:10px;
+	text-shadow: 2px 1px #000;
+	
+}
+
+h3{    /* estilo para los titular de subpaginas jerarquia 3*/
+	font-family: Josefin Sans Bold; /* la fuente definida */
+	color:#000;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: left;
+	max-width: 1020px; /* ancho máximo del párrafo */
+	margin:auto;          /* margen igual a izquierda y derecha */ 
+    padding:  40px 40px 10px 40px;
+}
+
+h4{    /* estilo para los titular de subpaginas jerarquia 4*/
+	font-family: Lato; /* la fuente definida */
+	color:#1a1a1a;
+	font-size: 15px;
+	font-weight: bold;
+	text-align: left;
+	max-width: 1020px; /* ancho máximo del párrafo */
+	margin:auto;          /* margen igual a izquierda y derecha */ 
+    padding:  10px 40px 10px 40px;
+}
+
+h5{    /* estilo para subpagina creditos jerarquia 5*/
+	font-family: Josefin Sans Bold; /* la fuente definida */
+	color:#000;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	max-width: 1020px; /* ancho máximo del párrafo */
+	margin:auto;          /* margen igual a izquierda y derecha */ 
+	padding:40px 40px 10px 40px;
+}
+
+h6 {    /* estilo para los titular de inicio jerarquia 2*/ 
+	font-family: Josefin Sans Bold; /* la fuente definida */
+	color:#fff;
+	font-size: 28px;
+	font-weight: bold;
+	text-align: center; /* ancho máximo del párrafo */
+	margin:auto;          /* margen igual a izquierda y derecha */ 
+    padding:  40px 40px 10px 20px;
+	text-shadow: 2px 1px #191919;
+	
+}
+
+.h6link{     /* estilo para links los titular de inicio jerarquia 2*/ 
+	color:#fff;
+	text-align: center;
+	text-decoration:none;
+}
+
+.h7{    /* estilo para ventana emergente de mapa jerarquia 7*/
+	font-family: Josefin Sans Bold; /* la fuente definida */
+	color: #666666;
+	font-size: 18px;
+	text-align: center;
+	margin:auto;          /* margen igual a izquierda y derecha */ 
+}
+
+.lienzo {	 /* Banner principal pagina de inicio con imagen de fondo*/ 
+	width: 100%;
+    height: 100vh;
+	top: 0;
+	margin:auto;
+	background-image: url(Imagenes/01.png);
+	background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.lienzo01 {  /* Banner principal subpaginas */ 
+	
+	width: 100%;
+    height: 60vh;
+	top: 0;
+	margin:auto; 
+	background-size: cover;
+    background-repeat: no-repeat;	
+}
+
+.lienzo02 { /* fondo titulo principal de creditos */ 
+	
+	width: 100%;
+    height: 30vh;
+	top: 0;
+	margin:auto; 
+	background-size: cover;
+    background-repeat: no-repeat;	
+}
+
+.center {   /* estilo para centrar titulo h1 en la pantalla*/ 
+  margin: auto;
+  position: sticky; /* posiciòn fija hasta su contenedor */ 
+  top: 50%;
+  left: 0%;
+  -ms-transform: translate(0%, -50%); /* ubicacion del contenido */ 
+  transform: translate(0%, -50%);
+}
+
+.center01 {  /* estilo para centrar titulo h2 en la pantalla*/ 
+  margin: auto;
+  position: sticky;  /* posiciòn fija hasta su contenedor */ 
+  top: 35%;
+  left: 50%;
+  -ms-transform: translate(0%, -35%);  /* ubicacion del contenido */ 
+  transform: translate(0%, -50%);
+}
+  
+.img01 { /* estilo para imagenes subpagina personajes*/ 
+  width: 50%;
+  height: auto;
+  margin: 10px 0px 5px 0px;
+}
+
+.text {	 /* estilo para textos subpagina personajes*/ 
+  width: 50%;
+  height: auto;
+  font-size: 13px;
+  float: right;
+}
+
+.lista {	/* estilo para listas subpagina personajes*/ 
+  padding-right: 8%;
+  margin: 10px 0px 5px 0px;
+}
+
+.divizqgris{  /* estilo para secciones izquierda oscura de inicio*/ 
+  width: 48.8%;
+  height: 33vh;
+  padding-left: 1.2%; /* medidas para rwd*/
+  margin-left: none;
+  float: left;
+  background-color: #dddad4;
+  display: flex;
+  background-image: url(Imagenes/in02.jpg);
+  background-size: cover;
+}
+
+.divizqgris:hover{  /* estilo para oscurecer la imagen cuando el cursor este sobre el div anterior*/ 
+  background-image: url(Imagenes/in02.1.jpg);
+  
+}
+
+.divderclaro{  /* estilo para secciones derecho clara de inicio*/ 
+  width: 48.8%;
+  height: 33vh;
+  padding-left: 1.2%; /* medidas para rwd*/
+  margin-right: none;
+  float: right;
+  background-color: #F4F0E9;
+  display: flex;  
+  background-image: url(Imagenes/in01.jpg);
+  background-size: cover;
+ 
+}
+
+.divderclaro:hover{ /* estilo para oscurecer la imagen cuando el cursor este sobre el div anterior*/ 
+  background-image: url(Imagenes/in01.1.jpg);
+
+}
+
+.divizqclaro{ /* estilo para secciones izquierda clara de inicio*/ 
+  width: 48.8%;
+  height: 33vh;
+  padding-left: 1.2%; /* medidas para rwd*/
+  margin-left: none;
+  float: left;
+  background-color: #F4F0E9;
+  display: flex;
+  background-image: url(Imagenes/in04.jpg);
+  background-size: cover;
+  
+  
+}
+
+.divizqclaro:hover{ /* estilo para oscurecer la imagen cuando el cursor este sobre el div anterior*/ 
+  background-image: url(Imagenes/in04.1.jpg);
+}
+
+.divdergris{  /* estilo para secciones derecha oscura de inicio*/ 
+  width: 48.8%;
+  height: 33vh;
+  padding-left: 1.2%; /* medidas para rwd*/ 
+  margin-right: none;
+  float: right;
+  background-color: #dddad4;
+  display: flex;
+  background-image: url(Imagenes/in03.jpg);
+  background-size: cover;
+  
+  
+}
+
+.divdergris:hover{	/* estilo para oscurecer la imagen cuando el cursor este sobre el div anterior*/ 
+  background-image: url(Imagenes/in03.1.jpg);
+}
+
+.columnader{ /* estilo para secciones derecha de subpaginas*/ 
+  width: 48%;
+  height: auto;
+  padding-left: 1.2%; /* medidas para rwd*/
+  margin-right: none;
+  float: right;
+  background-color: #F4F0E9;
+  
+}
+
+.columnaizq{  /* estilo para secciones izquierda  de subpaginas*/ 
+  width: 48%;
+  height: auto;
+  padding-left: 1.2%; /* medidas para rwd*/
+  margin-left: none;
+  float: left;
+  background-color: #dddad4;
+ 
+}
+
+.columnacentral{  /* estilo para secciones de ancho completo "creditos"*/ 
+  width: 100%;
+  height: auto;
+  padding-bottom: 40px ;
+  
+}
+
+
+
+
+
+
+.mapaaside{
+	display: flex;
+	justify-content: center;
+}
+
+.mapa{  /* estilo para mapa intereactivo*/ 
+	width: 80vw;
+	height: 80vw;
+	background-image: url(Imagenes/rec02.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	position: relative;
+}	
+
+/* estilo de botones del mapa */
+
+.aguasur{		/*Estilo para ubicar cada sitio dentro del mapa*/
+	position: absolute;								
+	background-image: url("Imagenes/ruta01.png");	
+	background-size: 100%;							
+	background-repeat: no-repeat;					
+	padding: 8% 7%;
+	top: 76.7%;
+	left: 29.6%;
+	
+}
+.aguasur:hover{		/*Estilo para hacer zoom del sitio escogido*/
+	padding: 9% 9%;
+	top: 76.7%;
+	left: 29.6%;
+	cursor: pointer;
+}
+
+.airesur{		/*Estilo para ubicar cada sitio dentro del mapa*/
+	position: absolute;								
+	background-image: url("Imagenes/ruta02.png");	
+	background-size: 100%;							
+	background-repeat: no-repeat;					
+	padding: 7% 5%;
+	top: 61.6%;
+    left: 27.8%;
+}
+.airesur:hover{		/*Estilo para hacer zoom del sitio escogido*/
+	padding: 8% 6%;
+    top: 61.6%;
+    left: 27.8%;
+	cursor: pointer;
+}
+
+.isla{			/*Estilo para ubicar cada sitio dentro del mapa*/
+	position: absolute;								
+	background-image: url("Imagenes/ruta03.png");	
+	background-size: 100%;							
+	background-repeat: no-repeat;					
+	padding: 5% 3%;
+	top: 59%;
+    left: 53.1%;
+	
+}
+.isla:hover{		/*Estilo para hacer zoom del sitio escogido*/
+	padding: 6% 4%;
+	top: 59%;
+    left: 53.1%;
+	cursor: pointer;
+}
+
+.tierra{		/*Estilo para ubicar cada sitio dentro del mapa*/
+	position: absolute;								
+	background-image: url("Imagenes/ruta04.png");	
+	background-size: 100%;							
+	background-repeat: no-repeat;					
+	padding: 6% 6.2%;
+    top: 41.6%;
+    left: 52%;
+	
+}
+.tierra:hover{		/*Estilo para hacer zoom del sitio escogido*/
+	padding: 7% 7.2%;
+    top: 41.6%;
+    left: 52%;
+	cursor: pointer;
+}
+
+.aguanorte{		/*Estilo para ubicar cada sitio dentro del mapa*/
+	position: absolute;								
+	background-image: url("Imagenes/ruta11.png");	
+	background-size: 100%;							
+	background-repeat: no-repeat;					
+	padding: 4% 4.1%;
+    top: 2.85%;
+    left: 38.2%;
+	
+}
+.aguanorte:hover{		/*Estilo para hacer zoom del sitio escogido*/
+	padding: 5% 5.5%;
+    top: 2.85%;
+    left: 38.2%;
+	cursor: pointer;
+}
+
+.tierrabase{		/*Estilo para ubicar cada sitio dentro del mapa*/
+	position: absolute;								
+	background-image: url("Imagenes/ruta12.png");	
+	background-size: 100%;							
+	background-repeat: no-repeat;					
+	padding: 6% 6.6%;
+    top: 36.5%;
+    left: 43.7%;
+}
+.tierrabase:hover{		/*Estilo para hacer zoom del sitio escogido*/
+	padding: 7% 7.8%;
+    top: 36.5%;
+    left: 43.7%;
+	cursor: pointer;
+}
+
+.cueva{			/*Estilo para ubicar cada sitio dentro del mapa*/
+	position: absolute;								
+	background-image: url("Imagenes/ruta13.png");	
+	background-size: 100%;							
+	background-repeat: no-repeat;					
+	padding: 4% 3.2%;
+    top: 44.4%;
+    left: 52.1%;
+}
+.cueva:hover{		/*Estilo para hacer zoom del sitio escogido*/
+	padding: 5% 4.2%;
+    top: 44.4%;
+    left: 52.1%;
+	cursor: pointer;
+}
+
+#ventana{    /*estilo de la ventana emergente*/
+	position: absolute;
+	margin: 25%;
+    background-color: #dddad4;  
+    padding: 0.5% 3%;
+    border-radius: 0.5rem;
+    max-width: 50%;
+    max-height: 70%;
+    display: none;
+    z-index: 10;
+}
+
+.imagensitio {		/*ubicación de la imágen en la ventana emergente*/
+	position: relative;			
+	width: 100%;
+}
+
+.Cerrar { 			/*Estilo de la x para cerrar las ventanas emergentes*/
+	position: relative;			
+    font-size: 1.8rem;							
+	left: 97%;									
+	text-align: right;							
+	color: #1a1a1a;
+  }
+.Cerrar:hover {	
+	cursor: pointer;
+}
+
+.convenciones{		/*estilo para que los elementos de las conveciones se ubiquen de acuerdo al anchio de pantalla*/
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-bottom: 5vh;
+
+}
+
+.convenciones2{		/*estilo para convenciones del mapa*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 300px;
+}
+
+.convenciones2 p:nth-of-type(1n){		/*estilo para dar espacio entre cada elemento*/
+	margin-left: 15px;
+}
+
+
+
+
+
+
+.p-inicio{  /* estilo para parrafos de inicio*/ 
+  padding:  40px 40px 40px 40px;
+  margin: auto;
+  text-align: center;
+  font-style: none;
+}
+
+.p-sub{ /* estilo para parrafos de subpaginas*/ 
+  padding:  10px 30px 40px 40px;
+  margin: auto;
+  text-align: left;
+  
+}
+
+.p-creditos{  /* estilo para parrafos de creditos*/ 
+	margin: auto;
+	text-align: center;
+}
+
+.p-map{  /* estilo para parrafos de recorrido*/ 
+	padding:  10px 10% 40px 10%;
+	margin: auto;
+	text-align: center;
+}
+
+footer {  /* estilo para contenedor footer*/ 
+  
+    display: flex;
+    width: 100%;
+    align-content: center;
+    position: relative;
+ 
+}
+
+.pie{	/* estilo para texto de footer*/ 
+   height: 30px;
+   width: 100%;
+   font-size:15px;
+   text-align: center;
+   color: white;
+   background-color: #1a1a1a;
+   padding-bottom:20px;
+}
+
+
+/* cuando la ventana mida menos de 900px */
+@media only screen and (max-width: 900px) {
+
+body {
+	font-size: 16px;
+	line-height: 1.3;
+}
+
+h1{     /* estilo para los titular de inicio jerarquia 1*/ 
+	font-size: 60px;
+} 
+
+h2{   /* estilo para los titular de subpaginas jerarquia 2*/
+	font-size: 40px;
+}
+
+h6 {    /* estilo para los titular de inicio jerarquia 2*/ 
+	font-size: 21px;
+}
+
+.menu li { /* estilo para cada botón del menu de navegación */ 
+	padding:5px 4px;
+	font-size:10px;
+}
+
+.pestañas {  /* estilo para cada barra del sitio de la subpagina historia*/ 
+    max-width: 900px;
+	height: 125px;
+	background-color: #282828;
+}
+
+.botonp {      /* estilo para cada botón del menu de historia */ 
+	width: 600px;
+	color:#fff;
+}
+
+.botonp:link {      /* estilo para cada botón del menu de historia */ 
+	width: 600px;
+}
+
+.botonp:hover {      /* estilo para cada botón del menu de historia */ 
+	width: 600px;
+	color: #fff;
+}
+
+.img01 { /* estilo para imagenes subpagina personajes*/ 
+	width: 100%;
+}
+
+.text {	 /* estilo para textos subpagina personajes*/ 
+	width: 100%;
+	font-size: 15px;
+}
+
+#ventana{    /*estilo de la ventana emergente*/
+	max-width: 150%;
+    max-height: 150%;
+	margin: 8%;
+}
+
+}
+
+
+/* cuando la ventana mida menos de 735px */
+@media only screen and (max-width: 735px) {
+	
+body {
+	font-size: 17px;
+	line-height: 1.3;
+}	
+	
+h1{     /* estilo para los titular de inicio jerarquia 1*/ 
+	font-size: 48px;
+} 
+
+h2{   /* estilo para los titular de subpaginas jerarquia 2*/
+	font-size: 35px;
+}	
+	
+header label{
+    display: block; /* se muestra el checkbox cuando se reduce la ventana*/
+} 
+	
+.menu ul{
+    position: fixed;  /* sostiene la posición aunque se haga scroll en el contenido */
+    background: rgba(244, 240, 233, 0.8); /* rojo, verde, azul, alpha (transparencia) */
+	border-radius: 0px 15px 15px 0px; /* para redondear borde del rectangulo*/
+	z-index: 10; /* para asegurar que el menu esta por encima de todo lo demás*/
+    width: 150px; /* se refiere al ancho del fondo del menu y no a los botones */
+    height: 210px;
+    top: 50px;
+	margin-left: -60%; /* se oculta porque se coloca por fuera de la ventana*/
+    transition: all 1s;   /* la animación de desplegar el menu dura 1 segundo*/
+    flex-direction: column;  /* se despliega en sentido vertical*/
+} 
+
+.menu li{ /* estilo para menu de navegación */ 
+	text-align: left;
+	width: 200px;
+	font-size:12px;
+	padding:5px 20px;		
+}
+	
+.menu li a { /* estilo para links en menu de navegación */ 
+	color: #000;
+}
+	
+#btn-menu:checked ~ .menu ul{  /* el checkbox controla las dos posiciones del menu */
+    margin: 1px; 
+} 
+	
+.botonp {      /* estilo para cada botón del menu de historia */ 
+	width: 400px;
+}
+
+.botonp:link {      /* estilo para cada botón del menu de historia */ 
+	width: 400px;
+}
+
+.botonp:hover {      /* estilo para cada botón del menu de historia */ 
+	width: 400px;
+}	
+	
+.divizqgris{  /* estilo para secciones izquierda oscura de inicio*/ 
+	width: 100%;
+	height: 16vh;
+}
+
+.divderclaro{  /* estilo para secciones derecho clara de inicio*/ 
+	width: 100%;
+	height: 16vh;
+}
+
+.divizqclaro{ /* estilo para secciones izquierda clara de inicio*/ 
+	width: 100%;
+	height: 16vh;
+}
+
+.divdergris{  /* estilo para secciones derecha oscura de inicio*/ 
+	width: 100%;
+	height: 16vh;
+}	
+
+.columnader{ /* estilo para secciones derecha de subpaginas*/ 
+	width: 100%;
+}
+
+.columnaizq{  /* estilo para secciones izquierda  de subpaginas*/ 
+	width: 100%;
+
+}
+
+.img01 { /* estilo para imagenes subpagina personajes*/ 
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 30px;
+}
+
+.pestañas { /* estilo para cada barra del sitio de la subpagina historia*/ 
+    max-width: 640px;
+}
+
+.alinear {  /* estilo para alinear imagen y texto en subpagina personajes de max.widhth:660px*/
+	width: 60%; 
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.pie{	/* estilo para texto de footer*/ 
+   font-size: 11px;
+}
+}

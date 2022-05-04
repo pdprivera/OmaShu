@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta lang="es" />
+    <title>Recorrido | Oma Shu</title>
+    <link href="estilo.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/png" href="Imagenes/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <div class="lienzo01" style="background-image: url('Imagenes/06.jpg')">
+      <header>
+        <input
+          type="checkbox"
+          id="btn-menu"
+        /><!-- checkbox permite la opción boleana -->
+        <label for="btn-menu"
+          ><img src="Imagenes/iconm.png" width="30px" /></label
+        ><!-- la imagen del ícono se muestra como label del checkbox pero se oculta cuando no se necesita -->
+
+        <nav class="menu">
+          <!-- menu de navegación o conjunto de botones -->
+          <ul>
+            <li>
+              <a href="index.html" target="_self"><b>I N I C I O</b></a>
+            </li>
+            <li><a href="historia.html" target="_self">H I S T O R I A</a></li>
+            <li>
+              <a href="ubicacion.html" target="_self">U B I C A C I Ó N</a>
+            </li>
+            <li>
+              <a href="recorrido.html" target="_self">R E C O R R I D O</a>
+            </li>
+            <li>
+              <a href="actividades.html" target="_self"
+                >A C T I V I D A D E S</a
+              >
+            </li>
+            <li>
+              <a href="personajes.html" target="_self">P E R S O N A J E S</a>
+            </li>
+            <li><a href="creditos.html" target="_self">C R É D I T O S</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="center01">
+        <h2>R E C O R R I D O</h2>
+        <!-- titular de mayor tamaño -->
+      </div>
+    </div>
+
+    <aside class="columnacentral" style="background-color: #f4f0e9">
+      <!-- contenedor columna central -->
+      <h5>MAPA INTERACTIVO</h5>
+      <p class="p-map">
+        A continuación se muestra en un mapa interactivo el recorrido del avatar
+        Aang, y los hermanos de la Tribu Agua del Sur, Katara y Soka. Se
+        muestran dos rutas que confluyen en la ciudad de OmaShu, la primera
+        corresponde al <i>Libro 1: Agua,</i> esta es desde el inicio de su aventura
+        hasta la ciudad, y la segunda corresponde al <i>Libro 2: Tierra,</i> sobre su
+        retorno a OmaShu desde la Tribu Agua del Norte. Todas sus aventuras
+        completas se pueden visualizar en la serie <b>“Avatar: La leyenda de Aang”.</b>
+      </p>
+    </aside>
+
+    <aside class="convenciones">
+      <span class="convenciones2">
+        <svg width="20" height="20">
+          <rect
+            width="20"
+            height="20"
+            style="fill: #162b53; stroke-width: 5; stroke: #fff"
+          />
+        </svg>
+        <p><b>Libro 1: Agua</b></p></span
+      >
+
+      <span class="convenciones2">
+        <svg width="20" height="20">
+          <rect
+            width="20"
+            height="20"
+            style="fill: #009444; stroke-width: 5; stroke: #fff"
+          />
+        </svg>
+        <p><b>Libro 2: Tierra</b></p></span
+      >
+    </aside>
+
+    <aside class="mapaaside">
+      <div class="mapa">
+        <div
+          class="aguasur"
+          onclick="ventanaSitio('TRIBU AGUA DEL SUR')"
+          title="Tribu Agua del sur"
+        ></div>
+
+        <div
+          class="airesur"
+          onclick="ventanaSitio('TEMPLO AIRE DEL SUR')"
+          title="Templo Aire del sur"
+        ></div>
+
+        <div
+          class="isla"
+          onclick="ventanaSitio('ISLA KYOSHI')"
+          title="Isla Kyoshi"
+        ></div>
+
+        <div
+          class="tierra"
+          onclick="ventanaSitio('CIUDAD DE OMASHU')"
+          title="Ciudad de OmaShu"
+        ></div>
+
+        <div
+          class="aguanorte"
+          onclick="ventanaSitio('TRIBU AGUA DEL NORTE')"
+          title="Tribu Agua del Norte "
+        ></div>
+
+        <div
+          class="tierrabase"
+          onclick="ventanaSitio('FORTALEZA DEL OCCIDENTE')"
+          title="Fortaleza del occidente"
+        ></div>
+
+        <div
+          class="cueva"
+          onclick="ventanaSitio('CUEVA DE LOS DOS ENAMORADOS')"
+          title="Cueva de los dos enamorados"
+        ></div>
+
+        <!-- ventana emergente -->
+        <div id="ventana">
+          <span class="Cerrar" title="Cerrar" onclick="cerrarVentana('ventana')"
+            >&times;</span
+          >
+          <p class="h7" id="TituloSitio"></p>
+          <br />
+          <img id="ImagenSitio" class="imagensitio" />
+          <b><p id="SubSitio"></p></b>
+          <p id="TextoSitio"></p>
+        </div>
+      </div>
+    </aside>
+
+    <aside class="convenciones">
+      <span class="convenciones2"
+        ><svg width="20" height="20">
+          <circle cx="10" cy="10" r="10" stroke-width="4" fill="#9dcded" />
+        </svg>
+        <p>Tribu Agua</p></span
+      >
+
+      <span class="convenciones2"
+        ><svg width="20" height="20">
+          <circle cx="10" cy="10" r="10" stroke-width="4" fill="#75b88d" />
+        </svg>
+        <p>Reino Tierra</p></span
+      >
+
+      <span class="convenciones2"
+        ><svg width="20" height="20">
+          <circle cx="10" cy="10" r="10" stroke-width="4" fill="#ea5748" />
+        </svg>
+        <p>Nacion del fuego</p></span
+      >
+
+      <span class="convenciones2"
+        ><svg width="20" height="20">
+          <circle cx="10" cy="10" r="10" stroke-width="4" fill="#f3c067" />
+        </svg>
+        <p>Templo Aire</p></span
+      >
+    </aside>
+
+    <footer>
+      <!-- pie de pagina que se mantiene abajo-->
+      <div class="pie">
+        <!-- estlo para contenido del pie de pagina -->
+        <p>Gráfica interactiva | Universidad Nacional de Colombia | 2021 ©</p>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
